@@ -13,8 +13,8 @@ class CartItem extends Component {
                 {
                     this.props.cartItemsList.map((item) => {
                         return (
-                            <div>
-                                <div className="list-group-item" key={item.id}>
+                            <div key={item.id}>
+                                <div className="list-group-item">
                                     <div className="row">
                                         <div className="col-md-8">{item.product.name}</div>
                                         <div className="col-md-2">${Number(item.product.priceInCents / 100)} </div>
