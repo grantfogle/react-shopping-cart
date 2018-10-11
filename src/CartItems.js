@@ -32,8 +32,10 @@ class CartItems extends Component {
                     </div>
                     <CartItem cartItemsList={this.props.cartItemsList} />
                     <div>Total Price: ${this.total(this.props.cartItemsList)} </div>
-                    <AddItem addItems={this.props.addItems} addNewItem={this.props.addNewItem}
-                        newItemObj={this.props.newItemObj} />
+                    <AddItem addItems={this.props.addItems}
+                        addNewItem={this.props.addNewItem}
+                        newItemObj={this.props.newItemObj}
+                        createItem={this.props.createItem} />
                 </div>
             </div>
         )

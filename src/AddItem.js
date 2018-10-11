@@ -9,6 +9,7 @@ class AddItem extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         this.props.addNewItem(this.state)
+        this.props.createItem([{ read: true, starred: true, id: this.state.id }])
     }
 
     render() {
