@@ -33,7 +33,7 @@ class AddItem extends Component {
                     }} >
                         <option>Select an option...</option>
                         {this.props.addItems.map(item => {
-                            return <option key={item.id} value={item.id}>{item.name}</option>
+                            return <option key={item.id} value={item.id}>{item.name} ${(item.priceInCents / 100).toFixed(2)}</option>
                         })}
                     </select>
                 </div>
