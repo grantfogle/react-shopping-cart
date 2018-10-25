@@ -25,7 +25,10 @@ class App extends Component {
   async createItem(item) {
     const response = await fetch('http://localhost:8082/api/messages', {
       method: 'POST',
-      body: JSON.stringify(item),
+      body: {
+        'subject': item.name,
+        'read': true,
+      },
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -33,11 +36,10 @@ class App extends Component {
     })
     const order = await response.json()
     console.log(order);
-    // this.setState({ products: [...this.state.products, order] })
   }
 
 
-
+  //refactor plz
   addNewItem = (newItem) => {
     this.setState(prevState => (
       {
